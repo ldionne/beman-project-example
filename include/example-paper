@@ -1,0 +1,12 @@
+#ifndef EXAMPLE_PAPER
+#define EXAMPLE_PAPER
+
+#include <type_traits>
+
+template <class T>
+constexpr bool foo() {
+    static_assert(std::is_trivially_copyable_v<T>);
+    return true;
+}
+
+#endif
